@@ -29,13 +29,3 @@ func die():
 		explosion.position = position
 		Explosions.add_child(explosion)
 	queue_free()
-
-
-func _on_Timer_timeout():
-	if Bullets == null:
-		Bullets = get_node("/root/Game/Bullets")
-	if Bullets != null:
-		var bullet = Enemy_Bullet.instance()
-		bullet.position = position
-		bullet.rotation = direction
-		Bullets.add_child(bullet) 
